@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Ratcow.Mapping.Controls;assembly=Ratcow.Mapping.Mapsui"
+             x:Class="Mapsui.Samples.Forms.Shared.DebugPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <maps:CustomMapView x:Name="TheMap" 
+                                  VerticalOptions="FillAndExpand" 
+                                  HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                <Button Text="Zoom" Clicked="Button_Clicked" />
+                <Button Text="Zoom+" Clicked="Button_Clicked_1" />
+                <Button Text="Zoom-" Clicked="Button_Clicked_2" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="pin" Clicked="Button_Clicked_3" />
+                    <Button Text="move" Clicked="Button_Clicked_4" />
+                    <Button Text="heat" Clicked="Button_Clicked_5" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

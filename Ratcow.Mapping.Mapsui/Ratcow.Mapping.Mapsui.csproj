@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Base.svg" />
+    <None Remove="Images\HeatMap.svg" />
+    <None Remove="Images\LocationCenter.svg" />
+    <None Remove="Images\LocationNoCenter.svg" />
+    <None Remove="Images\Mobile.svg" />
+    <None Remove="Images\RotationZero.svg" />
+    <None Remove="Images\ShowFocused.svg" />
+    <None Remove="Images\ShowNone.svg" />
+    <None Remove="Images\ShowPinned.svg" />
+    <None Remove="Images\ZoomIn.svg" />
+    <None Remove="Images\ZoomOut.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Base.svg" />
+    <EmbeddedResource Include="Images\HeatMap.svg" />
+    <EmbeddedResource Include="Images\LocationCenter.svg" />
+    <EmbeddedResource Include="Images\LocationNoCenter.svg" />
+    <EmbeddedResource Include="Images\Mobile.svg" />
+    <EmbeddedResource Include="Images\RotationZero.svg" />
+    <EmbeddedResource Include="Images\ShowFocused.svg" />
+    <EmbeddedResource Include="Images\ShowNone.svg" />
+    <EmbeddedResource Include="Images\ShowPinned.svg" />
+    <EmbeddedResource Include="Images\ZoomIn.svg" />
+    <EmbeddedResource Include="Images\ZoomOut.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ratcow.Mapping\Ratcow.Mapping.csproj" />
+    <ProjectReference Include="..\Mapsui.Geometries\Mapsui.Geometries.csproj" />
+    <ProjectReference Include="..\Mapsui.Rendering.Skia\Mapsui.Rendering.Skia.csproj" />
+    <ProjectReference Include="..\Mapsui.UI.Forms\Mapsui.UI.Forms.csproj" />
+    <ProjectReference Include="..\Mapsui\Mapsui.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controls\CustomMapView.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
